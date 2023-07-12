@@ -17,7 +17,7 @@ const SearchContainer = styled(Box)(({ theme }) => ({
   justifyContent: "center",
 
   [theme.breakpoints.down("md")]: {
-    width: "96%",
+    width: "95%",
     marginBottom: "2px",
     display: "flex",
   },
