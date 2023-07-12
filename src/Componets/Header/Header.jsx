@@ -8,12 +8,18 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SideDrawer from "./SideDrawer";
 //styled is used to give custom css in material UI
-const StyledHeader = styled(AppBar)`
-  background: #2874f0;
-  height: 3.4rem;
-  box-shadow: none;
-  display: flex;
-  justify-content: center;
+const StyledHeader = styled(AppBar)(({ theme }) => ({
+  background: "#2874f0",
+  height: "3.4rem",
+  boxShadow: "none",
+  display: "flex",
+  justifyContent: "center",
+  [theme.breakpoints.down("md")]: {
+    height: "6.4rem",
+  },
+}));
+
+`
 `;
 const Component = styled(Link)(({ theme }) => ({
   marginLeft: "12%",
@@ -38,6 +44,7 @@ const MenuButton = styled(IconButton)(({ theme }) => ({
   color: "inherit",
   [theme.breakpoints.down("md")]: {
     display: "block",
+    marginLeft: "-11px",
   },
 }));
 

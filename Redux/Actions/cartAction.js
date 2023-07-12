@@ -3,7 +3,7 @@ import * as actionType from "../Constants/cartConstants";
 export const addTocard = (id, quantity) => async (dispatch) => {
   try {
     const { data } = await axios.get(
-      `https://ecombackend.tushargadher25.repl.co/product/${id}`
+      `https://flipkart.tushargadher25.repl.co/product/${id}`
     );
     dispatch({ type: actionType.ADD_TO_CART, payload: { ...data, quantity } });
   } catch (error) {

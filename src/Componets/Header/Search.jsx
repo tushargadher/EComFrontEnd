@@ -7,13 +7,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../../Redux/Actions/productActions";
 import { List, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
-const SearchContainer = styled(Box)`
-  background: #fff;
-  width: 37%;
-  margin-left: 10px;
-  border-radius: 2px;
-  display: flex;
-  justify-content: center;
+const SearchContainer = styled(Box)(({ theme }) => ({
+  background: "#fff",
+  width: "37%",
+  marginLeft: "10px",
+  borderRadius: "2px",
+  display: "flex",
+  boxShadow: "none",
+  display: "flex",
+  justifyContent: "center",
+  [theme.breakpoints.down("md")]: {
+    width: "96%",
+    marginBottom: "2px",
+  },
+}));
+
+`
 `;
 const InputSearchBase = styled(InputBase)`
   width: 100%;
