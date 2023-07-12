@@ -2,10 +2,14 @@ import React from "react";
 import { Box, Button, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-const Container = styled(Grid)`
-  margin-top: 3.4rem;
-  padding: 30px 135px;
-`;
+const Container = styled(Grid)(({ theme }) => ({
+  marginTop: "3.4rem",
+  padding: "30px 135px",
+  [theme.breakpoints.down("md")]: {
+    marginTop: "6.4rem",
+    padding: "0px",
+  },
+}));
 const Component = styled(Grid)`
   border: 1px solid #f0f0f0;
   background: #fff;
