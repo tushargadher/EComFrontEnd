@@ -28,7 +28,7 @@ const Image = styled("img")(({ theme }) => ({
   height: 280,
   [theme.breakpoints.down("md")]: {
     objectFit: "cover",
-    height: 180,
+    height: 150,
   },
 }));
 

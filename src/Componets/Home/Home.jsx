@@ -13,9 +13,14 @@ import Features from "./Features";
 import Footer from "../Footer/Footer";
 import SideAD from "./SideAD";
 import SlidewithAD from "./SlidewithAD";
-const WrapCarousel = styled(Box)`
-  padding: 1.1rem 0.5rem 0.5rem 0.5rem;
-  background-color: #f1f3f6;
+const WrapCarousel = styled(Box)(({ theme }) => ({
+  padding: "1.1rem 0.5rem 0.5rem 0.5rem",
+  backgroundColor: "#f1f3f6",
+  [theme.breakpoints.down("md")]: {
+    padding: "0px",
+  },
+}));
+`
 `;
 const WrapSlider = styled(Box)`
   display: flex;
