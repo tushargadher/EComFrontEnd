@@ -20,18 +20,31 @@ const Componet = styled(Box)(({ theme }) => ({
     padding: "0",
   },
 }));
-const NavItems = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //   border: 2px solid red;
-  height: 100%;
-  padding: 12px 8px;
-`;
-const Text = styled(Typography)`
-  font-size: 14px;
-  font-weight: 600;
-`;
+const NavItems = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  height: "100%",
+  padding: "12px 8px",
+  [theme.breakpoints.down("md")]: {
+    padding: "5px 3px",
+  },
+}));
+const Text = styled(Typography)(({ theme }) => ({
+  fontSize: "14px",
+  fontWeight: "600",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "12px",
+    fontWeight: "400",
+  },
+}));
+
+const Img = styled("img")(({ theme }) => ({
+  width: "64px",
+  [theme.breakpoints.down("md")]: {
+    width: "44px",
+  },
+}));
 
 const NavBar = () => {
   return (
@@ -40,7 +53,7 @@ const NavBar = () => {
         <Componet>
           {navData.map((data) => (
             <NavItems key={data.key}>
-              <img src={data.url} alt="img" style={{ width: 64 }} />
+              <Img src={data.url} alt="img" />
               <Text>{data.text}</Text>
             </NavItems>
           ))}

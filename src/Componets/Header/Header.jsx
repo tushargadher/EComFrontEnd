@@ -15,12 +15,16 @@ const StyledHeader = styled(AppBar)`
   display: flex;
   justify-content: center;
 `;
-const Component = styled(Link)`
-  margin-left: 12%;
-  line-height: 0;
-  text-decoration: none;
-  color: inherit;
-`;
+const Component = styled(Link)(({ theme }) => ({
+  marginLeft: "12%",
+  lineHeight: "0",
+  textDecoration: "none",
+  color: "inherit",
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "2%",
+  },
+}));
+
 const SubHeading = styled(Typography)`
   font-size: 0.625rem;
   font-style: italic;
@@ -34,6 +38,13 @@ const MenuButton = styled(IconButton)(({ theme }) => ({
   color: "inherit",
   [theme.breakpoints.down("md")]: {
     display: "block",
+  },
+}));
+
+const Img = styled("img")(({ theme }) => ({
+  width: "75px",
+  [theme.breakpoints.down("md")]: {
+    width: "70px",
   },
 }));
 
@@ -57,7 +68,7 @@ const Header = () => {
           </MenuButton>
           <SideDrawer open={open} handleOpen={handleOpen} />
           <Component to="/">
-            <img src={logoURL} alt="flipkart" style={{ width: 75 }} />
+            <Img src={logoURL} alt="flipkart" />
             <Box>
               <SubHeading>
                 Explore&nbsp;
