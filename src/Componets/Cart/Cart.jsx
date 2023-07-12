@@ -10,6 +10,7 @@ const Component = styled(Grid)(({ theme }) => ({
   padding: "30px 135px",
   [theme.breakpoints.down("md")]: {
     padding: "15px 0",
+    marginTop: "6.4rem",
   },
 }));
 

@@ -12,23 +12,21 @@ const SearchContainer = styled(Box)(({ theme }) => ({
   width: "37%",
   marginLeft: "10px",
   borderRadius: "2px",
-  display: "flex",
   boxShadow: "none",
+  display: "none",
   justifyContent: "center",
+
   [theme.breakpoints.down("md")]: {
     width: "96%",
     marginBottom: "2px",
-    display: "none",
+    display: "flex",
   },
 }));
-
-`
-`;
 const InputSearchBase = styled(InputBase)`
   width: 100%;
   margin-left: 12px;
   font-weight: light;
-  font-size: unset;
+  font-size: 12px;
 `;
 const SearchIconWrapper = styled(SearchIcon)`
   color: #2874f0;
@@ -41,8 +39,12 @@ const ResultList = styled(List)(({ theme }) => ({
   marginTop: "38px",
   background: "#ffffff",
   color: "black",
+  [theme.breakpoints.down("md")]: {
+    left: "10px",
+    fontSize: "12px",
+  },
 }));
-const Search = () => {
+const SearchMoblie = () => {
   const { products } = useSelector((state) => state.getProducts);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -92,4 +94,4 @@ const Search = () => {
     </>
   );
 };
-export default Search;
+export default SearchMoblie;

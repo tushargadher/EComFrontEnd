@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Search from "./Search";
+import SearchMoblie from "./SearchMobile";
 import CustomButtons from "./CustomButtons";
 import { Link } from "react-router-dom";
 import { Typography, Box, Toolbar, AppBar } from "@mui/material";
@@ -89,6 +90,7 @@ const Header = () => {
           <Search />
           <CustomButtons />
         </Toolbar>
+        <SearchMoblie />
       </StyledHeader>
     </>
   );

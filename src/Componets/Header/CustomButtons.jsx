@@ -17,23 +17,33 @@ const Wrapper = styled(Box)(({ theme }) => ({
   marginLeft: "2%",
   fontWeight: "bold",
   [theme.breakpoints.down("md")]: {
+    marginLeft: "40%",
+    flexDirection: "row-reverse",
+  },
+}));
+const LoginButton = styled(Button)(({ theme }) => ({
+  background: "#ffffff",
+  color: "#2874f0",
+  borderRadius: "1px",
+  textTransform: "capitalize",
+  padding: "5px 2.5rem",
+  boxShadow: "none",
+  height: "100%",
+  fontWeight: "bold",
+  [theme.breakpoints.down("md")]: {
+    display: "absolute",
+    background: "#2874f0",
+    color: "#fff",
+    fontWeight: "normal",
+  },
+}));
+const Typographys = styled(Typography)(({ theme }) => ({
+  fontWeight: "bold",
+  textDecoratin: "none",
+  [theme.breakpoints.down("md")]: {
     display: "none",
   },
 }));
-const LoginButton = styled(Button)`
-  background: #ffffff;
-  color: #2874f0;
-  border-radius: 1px;
-  text-transform: capitalize;
-  padding: 5px 2.5rem;
-  box-shadow: none;
-  height: 100%;
-  font-weight: bold;
-`;
-const Typographys = styled(Typography)`
-  font-weight: bold;
-  text-decoratin: none;
-`;
 
 const hoverEfffect = {
   background: "#ffffff",

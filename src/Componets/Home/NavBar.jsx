@@ -18,6 +18,7 @@ const Componet = styled(Box)(({ theme }) => ({
   background: "#fff",
   [theme.breakpoints.down("md")]: {
     padding: "0",
+    marginTop: "6.4rem",
   },
 }));
 const NavItems = styled(Box)(({ theme }) => ({
@@ -27,7 +28,7 @@ const NavItems = styled(Box)(({ theme }) => ({
   height: "100%",
   padding: "12px 8px",
   [theme.breakpoints.down("md")]: {
-    padding: "5px 3px",
+    padding: "5px",
   },
 }));
 const Text = styled(Typography)(({ theme }) => ({

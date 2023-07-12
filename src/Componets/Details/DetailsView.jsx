@@ -8,10 +8,13 @@ import Grid from "@mui/material/Grid";
 import ActionItem from "./ActionItem";
 import ProductDetails from "./ProductDetails";
 import Loader from "./Loader";
-const Container = styled(Box)`
-  margin-top: 3.4rem;
-  background: #f2f2f2;
-`;
+const Container = styled(Box)(({ theme }) => ({
+  marginTop: " 3.4rem",
+  background: "#f2f2f2",
+  [theme.breakpoints.down("md")]: {
+    marginTop: "6.4rem",
+  },
+}));
 const Component = styled(Grid)`
   background: #ffffff;
   display: flex;

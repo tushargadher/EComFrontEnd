@@ -12,7 +12,6 @@ const Offers = styled(Typography)(({ theme }) => ({
   fontSize: "14px",
   color: "#212121",
   marginBottom: "8px",
-  // border: 1px solid red;
   display: "flex",
   alignItems: "center",
   [theme.breakpoints.down("md")]: {
