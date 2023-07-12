@@ -8,6 +8,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import DeliveryDialog from "../Dialogs/DeliveryDialog";
 import WarrantyDialog from "../Dialogs/WarrantyDialog";
+
 const Offers = styled(Typography)(({ theme }) => ({
   fontSize: "14px",
   color: "#212121",
@@ -17,7 +18,7 @@ const Offers = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     display: "block",
   },
-})); 
+}));
 const OfferBadge = styled(LocalOfferIcon)(({ theme }) => ({
   color: "#14be47",
   fontSize: "19px",
@@ -193,7 +194,9 @@ const ProductDetails = ({ product }) => {
             </ColumnText>
             <ColumnText>
               <TableCell style={{ color: "#878787" }}>Description</TableCell>
-              <TableCell>{product.description}</TableCell>
+              <TableCell style={{ textAlign: "justify" }}>
+                {product.description}
+              </TableCell>
             </ColumnText>
           </TableBody>
         </Table>

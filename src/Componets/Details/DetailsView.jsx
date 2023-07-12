@@ -19,10 +19,14 @@ const Component = styled(Grid)`
   background: #ffffff;
   display: flex;
 `;
-const RightComponent = styled(Grid)`
-  margin-top: 3.4rem;
-  padding-left: 25px;
-`;
+const RightComponent = styled(Grid)(({ theme }) => ({
+  marginTop: " 3.4rem",
+  paddingLeft: "25px",
+  [theme.breakpoints.down("md")]: {
+    marginTop: " 0rem",
+    padding: "10px 20px",
+  },
+}));
 const DetailsView = () => {
   const { id } = useParams();
   const { loading, product } = useSelector((state) => state.getProductDetails);
