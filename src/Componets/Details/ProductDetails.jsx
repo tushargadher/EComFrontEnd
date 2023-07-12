@@ -17,10 +17,7 @@ const Offers = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     display: "block",
   },
-}));
-
-`
-`;
+})); 
 const OfferBadge = styled(LocalOfferIcon)(({ theme }) => ({
   color: "#14be47",
   fontSize: "19px",
@@ -46,7 +43,11 @@ const ColumnText = styled(TableRow)`
     border: none;
   }
 `;
-
+const SuperCoinImg = styled("img")(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+}));
 const ProductDetails = ({ product }) => {
   const fassured =
     "https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png";
@@ -75,7 +76,7 @@ const ProductDetails = ({ product }) => {
             display: "flex",
           }}
         >
-          420 Rating & 2000 Review
+          443 Rating & 2000 Review
           <Box component="span">
             <img
               src={fassured}
@@ -187,7 +188,7 @@ const ProductDetails = ({ product }) => {
             </ColumnText>
             <ColumnText>
               <TableCell colSpan={2}>
-                <img src={FKPoint} alt="flipkartPoint" />
+                <SuperCoinImg src={FKPoint} alt="flipkartPoint" />
               </TableCell>
             </ColumnText>
             <ColumnText>
