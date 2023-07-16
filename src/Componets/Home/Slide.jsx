@@ -19,28 +19,42 @@ const responsive = {
     items: 1,
   },
 };
-const Containe = styled(Box)`
-  background: white;
-  height: 100%;
-  width: 84%;
-`;
-const Wrapper = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-  cursor: pointer;
-`;
 
-const Image = styled("img")({
+const Containe = styled(Box)(({ theme }) => ({
+  background: "white",
+  height: "100%",
+  width: "84%",
+  // display: "flex",
+  [theme.breakpoints.down("sm")]: {
+    height: "85%",
+    width: "100%",
+  },
+}));
+
+const Wrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  paddingTop: "1rem",
+}));
+
+const Image = styled("img")(({ theme }) => ({
   width: "70%",
-  // height: "14.5rem",
-});
-const Text = styled(Typography)`
-  font-size: 0.9rem;
-  margin-top: 2px;
-  color: inherit;
-`;
+  height: "14rem",
+  objectFit: "contain",
+  [theme.breakpoints.down("sm")]: {
+    width: "35%",
+    height: "10rem",
+  },
+}));
+
+const Text = styled(Typography)(({ theme }) => ({
+  fontSize: "0.9rem",
+  marginTop: "2px",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "0.8rem",
+  },
+}));
 
 const Slide = ({ products }) => {
   return (
@@ -64,7 +78,7 @@ const Slide = ({ products }) => {
               >
                 <Wrapper>
                   <Image src={product.url} alt="product" />
-                  <Text style={{ fontWeight: "bold" }}>
+                  <Text style={{ fontWeight: "bold", color: "black" }}>
                     {product.title.shortTitle}
                   </Text>
                   <Text style={{ color: "green" }}>{product.discount}</Text>

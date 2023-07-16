@@ -15,7 +15,7 @@ const Offers = styled(Typography)(({ theme }) => ({
   marginBottom: "8px",
   display: "flex",
   alignItems: "center",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     display: "block",
   },
 }));
@@ -24,7 +24,7 @@ const OfferBadge = styled(LocalOfferIcon)(({ theme }) => ({
   fontSize: "19px",
   // border: "1px solid red",
   marginRight: "10px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginRight: "6px",
   },
 }));
@@ -45,7 +45,7 @@ const ColumnText = styled(TableRow)`
   }
 `;
 const SuperCoinImg = styled("img")(({ theme }) => ({
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "100%",
   },
 }));

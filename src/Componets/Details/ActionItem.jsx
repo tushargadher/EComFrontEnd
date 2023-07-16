@@ -17,7 +17,7 @@ const Container = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginTop: "0px",
   },
 }));
@@ -25,14 +25,14 @@ const ImgWrap = styled(Box)(({ theme }) => ({
   padding: "20px",
   border: "1px solid #f0f0f0",
   width: "70%",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "80%",
   }, 
 }));
 const BtnWrap = styled(Box)(({ theme }) => ({
   marginTop: "20px",
   width: "90%",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "100%",
   }, 
 }));

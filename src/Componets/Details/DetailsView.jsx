@@ -11,7 +11,7 @@ import Loader from "./Loader";
 const Container = styled(Box)(({ theme }) => ({
   marginTop: " 3.4rem",
   background: "#f2f2f2",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginTop: "6.4rem",
   },
 }));
@@ -22,7 +22,7 @@ const Component = styled(Grid)`
 const RightComponent = styled(Grid)(({ theme }) => ({
   marginTop: " 3.4rem",
   paddingLeft: "25px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginTop: " 0rem",
     padding: "10px 20px",
   },
@@ -46,10 +46,10 @@ const DetailsView = () => {
           product &&
           Object.keys(product).length && (
             <Component container>
-              <Grid item lg={4} md={4} sm={8} xs={12}>
+              <Grid item lg={4} sm={4} sm={8} xs={12}>
                 <ActionItem product={product} />
               </Grid>
-              <RightComponent item lg={8} md={8} sm={8} xs={12}>
+              <RightComponent item lg={8} sm={8} sm={8} xs={12}>
                 <ProductDetails product={product} />
               </RightComponent>
             </Component>

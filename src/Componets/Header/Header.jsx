@@ -15,7 +15,7 @@ const StyledHeader = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   display: "flex",
   justifyContent: "center",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     height: "6.4rem",
   },
 }));
@@ -27,7 +27,7 @@ const Component = styled(Link)(({ theme }) => ({
   lineHeight: "0",
   textDecoration: "none",
   color: "inherit",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginLeft: "2%",
   },
 }));
@@ -43,7 +43,7 @@ const PlusImg = styled("img")({
 const MenuButton = styled(IconButton)(({ theme }) => ({
   display: "none",
   color: "inherit",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     display: "block",
     marginLeft: "-11px",
   },
@@ -51,7 +51,7 @@ const MenuButton = styled(IconButton)(({ theme }) => ({
 
 const Img = styled("img")(({ theme }) => ({
   width: "75px",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     width: "70px",
   },
 }));

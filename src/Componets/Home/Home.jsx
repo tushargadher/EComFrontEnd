@@ -16,21 +16,24 @@ import SlidewithAD from "./SlidewithAD";
 const WrapCarousel = styled(Box)(({ theme }) => ({
   padding: "1.1rem 0.5rem 0.5rem 0.5rem",
   backgroundColor: "#f1f3f6",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     padding: "0px",
   },
 }));
-`
-`;
-const WrapSlider = styled(Box)`
-  display: flex;
-  height: 45vh;
-  margin: 0.7rem 0;
-`;
+
+const WrapSlider = styled(Box)(({ theme }) => ({
+  display: "flex",
+  height: "45vh",
+  margin: "0.7rem 0",
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
+}));
+
 const Home = () => {
   //useSelector is used to read data from redux store
   const { products } = useSelector((state) => state.getProducts);
-  console.log("Redux DATA", products);
+  // console.log("Redux DATA", products);
   const dispatch = useDispatch();
   useEffect(() => {
     // getProductsReducer(); we can not use directy because it is redux function
@@ -92,7 +95,7 @@ const Home = () => {
           <Slide products={products} />
         </WrapSlider>
       </WrapCarousel>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

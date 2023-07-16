@@ -16,7 +16,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
   height: "50%",
   marginLeft: "2%",
   fontWeight: "bold",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     marginLeft: "40%",
     flexDirection: "row-reverse",
   },
@@ -30,7 +30,7 @@ const LoginButton = styled(Button)(({ theme }) => ({
   boxShadow: "none",
   height: "100%",
   fontWeight: "bold",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     display: "absolute",
     background: "#2874f0",
     color: "#fff",
@@ -40,7 +40,7 @@ const LoginButton = styled(Button)(({ theme }) => ({
 const Typographys = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
   textDecoratin: "none",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     display: "none",
   },
 }));

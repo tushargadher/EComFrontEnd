@@ -16,9 +16,9 @@ const Image = styled("img")({
 const Features = () => {
   return (
     <>
-      <Conmponent lg={12} sm={12} md={12} xs={12} container>
+      <Conmponent lg={12} sm={12} sm={12} xs={12} container>
         {features.map((items) => (
-          <Grid item lg={3} md={3} sm={6} xs={6} key={items.key}>
+          <Grid item lg={3} sm={3} sm={6} xs={6} key={items.key}>
             <Image src={items.url} />
           </Grid>
         ))}

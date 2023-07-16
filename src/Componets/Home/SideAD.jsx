@@ -15,7 +15,7 @@ const Container = styled(Box)(({ theme }) => ({
   backGround: "white",
   overflow: "hidden",
   marginLeft: "0.8rem",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("sm")]: {
     display: "none",
   },
 }));
