@@ -33,14 +33,20 @@ const ButtonWrap = styled(Box)`
   justify-content: flex-end;
   box-shadow: 0 -2px 10px 0 rgb(0 0 0 / 10%);
 `;
-const OrderButton = styled(Button)`
-  background: #fb641b;
-  margin-right: 20px;
-  color: white;
-  height: 51px;
-  width: 250px;
-  border-radius: 2px;
-`;
+const OrderButton = styled(Button)(({ theme }) => ({
+  background: "#fb641b",
+  marginRight: "20px",
+  color: "white",
+  height: "51px",
+  width: "250px",
+  borderRadius: "2px",
+  [theme.breakpoints.down("sm")]: {
+    marginRight: "0px",
+    width: "180px",
+    height: "40px",
+  },
+}));
+
 const hoverEfffect = {
   background: "#fb641b",
   "&:hover": {
