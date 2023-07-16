@@ -5,7 +5,7 @@ const datacontext = createContext();
 
 const DataProvider = ({ children }) => {
   const [loggedUser, setLoggedUser] = useState("");
-  const server = "https://flipkart.tushargadher25.repl.co";
+  const server = "https://flipkart-iim1.onrender.com";
 
   return (
     <>
