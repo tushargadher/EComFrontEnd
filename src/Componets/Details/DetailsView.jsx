@@ -46,10 +46,10 @@ const DetailsView = () => {
           product &&
           Object.keys(product).length && (
             <Component container>
-              <Grid item lg={4} sm={4} sm={8} xs={12}>
+              <Grid item lg={4} sm={4} md={8} xs={12}>
                 <ActionItem product={product} />
               </Grid>
-              <RightComponent item lg={8} sm={8} sm={8} xs={12}>
+              <RightComponent item lg={8} sm={8} md={8} xs={12}>
                 <ProductDetails product={product} />
               </RightComponent>
             </Component>
@@ -60,3 +60,4 @@ const DetailsView = () => {
   );
 };
 export default DetailsView;
+

@@ -7,33 +7,44 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { DataState } from "../../../context/DataProvider";
-// import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const Component = styled(Box)`
-  display: flex;
-  //   align-items: center;
-  justify-content: center;
-  width: 90vh;
-  height: 70vh;
-`;
-const Img = styled(Box)`
-  background: #2874f0
-    url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png)
-    center 85% no-repeat;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 45px 35px;
-  height: 82.7%;
-  width: 40%;
-`;
-const Wrapper = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 25px 25px;
-  //   align-items: center;
-`;
+
+const Component = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  // width: "90vw",
+  height: "70vh",
+  [theme.breakpoints.down("md")]: {
+    // flexDirection: "column",
+    width: "100%",
+  },
+}));
+
+const Img = styled(Box)(({ theme }) => ({
+  background:
+    "#2874f0 url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png) center 85% no-repeat",
+  display: "flex",
+  flexDirection: "column",
+  color: "white",
+  padding: "45px 35px",
+  height: "82.7%",
+  width: "40%",
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
+}));
+const Wrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around",
+  padding: "25px 25px",
+  // alignItems: "center",
+  [theme.breakpoints.down("md")]: {
+    // backgroundColor: "red",
+    // width: "50%",
+    padding: "20px",
+  },
+}));
 const LoginButton = styled(Button)`
   text-transform: none;
   border-radius: 2px;
@@ -161,7 +172,7 @@ const LoginDialog = ({ open, setOpen }) => {
       <Dialog
         open={open}
         onClose={handleClose}
-        PaperProps={{ sx: { maxWidth: "unset", maxHeight: "unset" } }} //for removing the by default width of Dialog
+        // PaperProps={{ sx: { maxWidth: "unset", maxHeight: "unset" } }} //for removing the by default width of Dialog
       >
         <Component>
           {/* if isSignUp is true then we will display signup Form else will display login form */}
