@@ -5,6 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import Loader from "../Details/Loader";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -70,6 +71,7 @@ const Slide = ({ products }) => {
           autoPlaySpeed={4000}
           keyBoardControl={true}
         >
+          {/* {console.log(products.length)} */}
           {products &&
             products.map((product) => (
               <Link

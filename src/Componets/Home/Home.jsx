@@ -13,6 +13,7 @@ import Features from "./Features";
 import Footer from "../Footer/Footer";
 import SideAD from "./SideAD";
 import SlidewithAD from "./SlidewithAD";
+
 const WrapCarousel = styled(Box)(({ theme }) => ({
   padding: "1.1rem 0.5rem 0.5rem 0.5rem",
   backgroundColor: "#f1f3f6",
@@ -55,6 +56,7 @@ const Home = () => {
           <SlidewithAD products={products} />
           <SideAD />
         </WrapSlider>
+        
         <WrapSlider>
           <SideBanner
             name="Today's Fashion Deals"
