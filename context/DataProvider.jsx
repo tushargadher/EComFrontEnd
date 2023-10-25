@@ -6,6 +6,7 @@ const datacontext = createContext();
 const DataProvider = ({ children }) => {
   const [loggedUser, setLoggedUser] = useState("");
   const server = "https://flipkart-iim1.onrender.com";
+  // const server = "http://localhost:5000";
 
   return (
     <>

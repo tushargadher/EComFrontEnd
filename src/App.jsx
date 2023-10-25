@@ -4,6 +4,7 @@ import Header from "./Componets/Header/Header";
 import Home from "./Componets/Home/Home";
 import Cart from "./Componets/Cart/Cart";
 import DetailsView from "./Componets/Details/DetailsView";
+import Footer from "./Componets/Footer/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route exact path="/products/:id" element={<DetailsView />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
+        <Footer />
       </DataProvider>
     </>
   );
